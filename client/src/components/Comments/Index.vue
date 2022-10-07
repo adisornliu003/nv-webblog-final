@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Comment Index</h1>
+        <h1>Comment </h1>
     </div>
 </template>
 <script>

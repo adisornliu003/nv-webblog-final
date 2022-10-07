@@ -1,17 +1,17 @@
 <template>
 <div>
-    <h1>Create User</h1>
+    <h1>สร้าง User</h1>
     <form v-on:submit.prevent = "createUser">
-        <p>name: <input type="text" v-model="user.name"></p>
-        <p>lastname: <input type="text" v-model="user.lastname"></p>
+        <p>ชื่อ: <input type="text" v-model="user.name"></p>
+        <p>นามสกุล: <input type="text" v-model="user.lastname"></p>
         <p>email: <input type="text" v-model="user.email"></p>
         <p>password: <input type="text" v-model="user.password"></p>
         <p><button type="submit">create user</button></p>
     </form>
     <hr>
     <div>
-        <p>name: {{user.name}}</p>
-        <p>lastname: {{user.lastname}}</p>
+        <p>ชื่อ: {{user.name}}</p>
+        <p>นามกสุล: {{user.lastname}}</p>
         <p>email: {{user.email}}</p>
         <p>password: {{user.password}}</p>
     </div>

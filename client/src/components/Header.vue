@@ -17,7 +17,7 @@ export default {};
 </script>
 <style scoped>
 .nv-navbar {
-	background-color: palegoldenrod;
+	background-color: rgb(255, 116, 130);
 	width: 100%;
 	padding: 10px 0px 10px 0px;
 }
@@ -33,7 +33,7 @@ export default {};
 .nv-navbar .nav li a {
 	padding: 10px;
 	text-decoration: none;
-	color: grey;
+	color: rgb(0, 0, 0);
 	font-weight: bold;
 }
 .nv-navbar .nav li a:hover {
@@ -42,7 +42,7 @@ export default {};
 	color: darkslategrey;
 }
 .nv-navbar .nav li a.router-link-active {
-	background-color: gold;
+	background-color: rgb(250, 185, 196);
 	color: darkslategrey;
 }
 .clearfix {

@@ -1,15 +1,15 @@
 <template>
 	<div>
-		<h2>Get all blogs</h2>
-		<p><button v-on:click="logout">Logout</button></p>
+		<h2> blogs ทั้งหมด</h2>
+		<p><button v-on:click="logout">ล็อกเอาท์</button></p>
 		<h4>จํานวน blog {{ blogs.length }}</h4>
 		<p><button v-on:click="navigateTo('/blog/create')">สร้าง blog</button></p>
 		<div v-for="blog in blogs" v-bind:key="blog.id">
 			<p>id: {{ blog.id }}</p>
-			<p>title: {{ blog.title }}</p>
-			<p>content: {{ blog.content }}</p>
-			<p>category: {{ blog.category }}</p>
-			<p>status: {{ blog.status }}</p>
+			<p>ชื่อร้าน: {{ blog.title }}</p>
+			<p>ข้อมูล: {{ blog.content }}</p>
+			<p>หมวดหมู่: {{ blog.category }}</p>
+			<p>สถานะ: {{ blog.status }}</p>
 			<p>
 				<button v-on:click="navigateTo('/blog/' + blog.id)">ดู blog</button>
 				<button v-on:click="navigateTo('/blog/edit/' + blog.id)">

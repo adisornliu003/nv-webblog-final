@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Edit Blog</h1>
+    <h1>แก้ไข Blog</h1>
     <form v-on:submit.prevent="editBlog">
-      <p>title: <input type="text" v-model="blog.title" /></p>
+      <p>ชื่อร้าน: <input type="text" v-model="blog.title" /></p>
 
       <transition name="fade">
         <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
@@ -25,8 +25,8 @@
           />
           <!-- <p v-if="isInitial || isSuccess"> -->
           <p v-if="isInitial">
-            Drag your file(s) here to begin<br />
-            or click to browse
+            คลิกใส่รูปภาพ<br />
+            
           </p>
           <p v-if="isSaving">Uploading {{ fileCount }} files...</p>
           <p v-if="isSuccess">Upload Successful.</p>
@@ -40,9 +40,9 @@
                 :src="BASE_URL + picture.name"
                 alt="picture image"
               />
-              <button v-on:click.prevent="delFile(picture)">Delete</button>
+              <button v-on:click.prevent="delFile(picture)">ลบ</button>
               <button v-on:click.prevent="useThumbnail(picture.name)">
-                Thumbnail
+                รูปย่อ
               </button>
             </li>
           </ul>
@@ -50,7 +50,7 @@
         </div>
       </form>
 
-      <p><strong>content:</strong></p>
+      <p><strong>ข้อมูล:</strong></p>
       <p>
         <vue-ckeditor
           v-model.lazy="blog.content"
@@ -60,8 +60,8 @@
         />
       </p>
 
-      <p>category: <input type="text" v-model="blog.category" /></p>
-      <p>status: <input type="text" v-model="blog.status" /></p>
+      <p>หมวดหมู่: <input type="text" v-model="blog.category" /></p>
+      <p>สถานะ: <input type="text" v-model="blog.status" /></p>
       <p>
         <button type="submit">update blog</button>
         <button v-on:click="navigateTo('/blogs')">กลับ</button>

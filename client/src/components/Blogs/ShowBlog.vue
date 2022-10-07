@@ -1,16 +1,16 @@
 <template>
 	<div>
-		<h1>Show Blog</h1>
+		<h1>Blog ที่แสดง</h1>
 		<p>id: {{ blog.id }}</p>
-		<p>title: {{ blog.title }}</p>
-		<p>content: {{ blog.content }}</p>
-		<p>category: {{ blog.category }}</p>
-		<p>status: {{ blog.status }}</p>
+		<p>ชิ่อร้าน: {{ blog.title }}</p>
+		<p>ข้อมูล: {{ blog.content }}</p>
+		<p>หมวดหมู่: {{ blog.category }}</p>
+		<p>สถานะ: {{ blog.status }}</p>
 		<p>
 			<button v-on:click="navigateTo('/blog/edit/' + blog.id)">
 				แก้ไข blog
 			</button>
-			<button v-on:click="navigateTo('/blogs')">กลั บ</button>
+			<button v-on:click="navigateTo('/blogs')">กลับ</button>
 		</p>
 	</div>
 </template>

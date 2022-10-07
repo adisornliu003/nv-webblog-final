@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Get All Users</h1>
+    <h1> Users ทั้งหมด</h1>
     <div v-if="users.length">
       <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
       <p>
