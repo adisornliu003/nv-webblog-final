@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> Users ทั้งหมด</h1>
+    <h1> ผู้ใช้ทั้งหมด</h1>
     <div v-if="users.length">
       <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
       <p>
@@ -26,7 +26,7 @@
         </p>
         <hr />
       </div>
-      <p><button v-on:click="logout">Logout</button></p>
+      <p><button v-on:click="logout">ล็อกเอาท์</button></p>
     </div>
   </div>
 </template>

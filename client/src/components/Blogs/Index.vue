@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<h2> blogs ทั้งหมด</h2>
+		<h2> ร้านทั้งหมด</h2>
 		<p><button v-on:click="logout">ล็อกเอาท์</button></p>
-		<h4>จํานวน blog {{ blogs.length }}</h4>
+		<h4>จํานวนร้านแนะนำ {{ blogs.length }}</h4>
 		<p><button v-on:click="navigateTo('/blog/create')">สร้าง blog</button></p>
 		<div v-for="blog in blogs" v-bind:key="blog.id">
 			<p>id: {{ blog.id }}</p>
@@ -13,7 +13,7 @@
 			<p>
 				<button v-on:click="navigateTo('/blog/' + blog.id)">ดู blog</button>
 				<button v-on:click="navigateTo('/blog/edit/' + blog.id)">
-					แก้ไข blog
+					แก้ไขร้าน
 				</button>
 				<button v-on:click="deleteBlog(blog)">ลบข้อมูล</button>
 			</p>

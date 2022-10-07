@@ -1,12 +1,12 @@
 <template>
 <div>
-    <h1>ปก้ไข User</h1>
+    <h1>แก้ไขผู้ใช้</h1>
     <form v-on:submit.prevent = "editUser">
         <p>ชื่อ: <input type="text" v-model="user.name"></p>
         <p>นามกสุล: <input type="text" v-model="user.lastname"></p>
         <p>email: <input type="text" v-model="user.email"></p>
         <p>password: <input type="text" v-model="user.password"></p>
-        <p><button type="submit">edit user</button></p>
+        <p><button type="submit">แก้ไข้</button></p>
     </form>
     <hr>
     <div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>แสดง User</h1>
+    <h1>แสดงผู้ใช้</h1>
     <p>id: {{ userId }}</p>
     <p>ชื่อ - นามสกุล {{ user.name }} - {{ user.lastname }}</p>
     <p>email: {{ user.email }}</p>

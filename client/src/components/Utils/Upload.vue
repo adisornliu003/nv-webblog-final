@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- <back-header /> -->
-		<h1>Upload Material:</h1>
+		<h1>อัปโหลด:</h1>
 		<form enctype="multipart/form-data" novalidate>
 			<div class="dropbox">
 				<input
@@ -18,7 +18,7 @@
 				/>
 				<!-- <p v-if="isInitial || isSuccess"> -->
 				<p v-if="isInitial">
-					Drag your file(s) here to begin<br> or click to browse
+					คลิกใส่รูปภาพ<br> 
 				</p>
 				<p v-if="isSaving">Uploading {{ fileCount }} files...</p>
 				<p v-if="isSuccess">Upload Successful.</p>
