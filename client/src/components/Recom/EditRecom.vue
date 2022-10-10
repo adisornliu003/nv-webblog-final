@@ -202,7 +202,7 @@
     methods: {
       async editRecom() {
         try {
-          await RecomsService.put(this.recom);
+          await RecomService.put(this.recom);
           this.$router.push({
             name: "recoms"
           });

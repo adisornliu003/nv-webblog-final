@@ -41,7 +41,6 @@
                 alt="picture image"
               />
               <button v-on:click.prevent="delFile(picture)">ลบ</button>
-			  <button v-on:click.prevent="useThumbnail(picture.name)">รูปย่อ</button>
             </li>
           </ul>
           <div class="clearfix"></div>
@@ -51,7 +50,7 @@
 
       <p>ที่อยู่: <input type="text" v-model="recom.category" /></p>
       <p>ประเภทร้าน: <input type="text" v-model="recom.status" /></p>
-      <p><button  type="submit">เพิ่มร้านแนะนำ</button></p>
+      <p><button type="submit">เพิ่มร้านแนะนำ</button></p>
       
     </form>
   </div>
@@ -198,7 +197,7 @@ export default {
     async createRecom() {
       try {
         this.recom.pictures = JSON.stringify(this.pictures);
-        await RecomsService.post(this.blog);
+        await RecomService.post(this.recom);
         this.$router.push({
           name: "recoms",
         });

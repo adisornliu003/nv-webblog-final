@@ -41,7 +41,7 @@
                 alt="picture image"
               />
               <button v-on:click.prevent="delFile(picture)">ลบ</button>
-			  <button v-on:click.prevent="useThumbnail(picture.name)">รูปย่อ</button>
+			  
             </li>
           </ul>
           <div class="clearfix"></div>

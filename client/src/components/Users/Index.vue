@@ -1,21 +1,24 @@
 <template>
   <div style="border:20px solid #99CCFF">
-    <h1> ผู้ใช้ทั้งหมด</h1>
+    <h1>รายชื่อผู้ใช้</h1>
     <div v-if="users.length">
-      <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
+      <h4>จำนวน  {{ users.length }} </h4>
       <p>
         <button class="button1" v-on:click="navigateTo('/user/create')">
             สร้างผู้ใช้งาน
           </button>
       </p>
-      <div v-for="user in users" v-bind:key="user.id">
+      <table style="border:1px dashed #CD00CD ; background-color: #CD00CD " cellspacing="3" cellpadding="3" width="400"><tr><td> <table style="border:1px dashed #E066FF ; background-color: #E066FF " cellspacing="5" cellpadding="3" width="400"><tr><td style="background-color: #ffffff">
+       <center> <div v-for="user in users" v-bind:key="user.id">
         <p>id: {{ user.id }}</p>
         <p>ชื่อ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
-        <p>Email: {{ user.email }}</p>
+        <p>Email: {{ user.email }}</p><hr />
+      </div></center>
+        
+</td></tr></table></td></tr></table><br>
+      
         
         
-        <hr />
-      </div>
       <p><button class="button3" v-on:click="logout">ล็อกเอาท์</button></p>
     </div>
   </div>

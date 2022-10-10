@@ -1,10 +1,10 @@
 <template>
 	<div style="border:20px solid #99CCFF">
-		<h2> จัดการข้อมูลร้านทั้งหมด</h2>
+		<h2> ร้านแนะนำ</h2>
 		
-		<h4>จํานวนร้าน {{ recom.length }} ร้าน</h4>
+		<h4>จํานวน {{ recom.length }} ร้าน</h4>
 		<p align = "right"><button class="button1"  v-on:click="navigateTo('/recom/create')">เพิ่มร้านแนะนำ</button></p><br>
-		<div v-for="recom in recom" v-bind:key="recom.id">
+		<div v-for="recom in recoms" v-bind:key="recom.id">
 			
 		<p>ชื่อร้าน: {{ recom.title }}</p>
 			

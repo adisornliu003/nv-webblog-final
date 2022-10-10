@@ -5,6 +5,7 @@ const BlogController = require('./controllers/BlogController');
 const ProductController = require('./controllers/ProductController');
 const RecomController = require('./controllers/RecomController');
 const Blog = require('./models/Blog.js');
+const Recom = require('./models/Recom.js');
 const Product = require('./models/Product.js');
 
 
@@ -50,7 +51,9 @@ module.exports = (app) => {
     app.put('/recom/:recomId', RecomController.put)
     app.delete('/recom/:recomId', RecomController.remove)
     app.get('/recom/:recomId', RecomController.show)
-    app.get('/recoms', RecomController.index)
+    app.get('/recom', RecomController.index)
+
+    app.put('/reco/:recoId', RecoController.put)
 
     app.post('/upload', function (req, res) {
         upload(req, res, function (err) {

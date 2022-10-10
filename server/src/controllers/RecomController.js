@@ -3,8 +3,8 @@ module.exports = {
     // get all blog
     async index(req, res) {
         try {
-            const recoms = await Recom.findAll()
-            res.send(recoms)
+            const recom = await Recom.findAll()
+            res.send(recom)
         } catch (err) {
             res.status(500).send({
                 error: 'The recoms information was incorrect'
