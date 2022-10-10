@@ -1,21 +1,21 @@
 <template>
 	<div>
 		<h2> ร้านทั้งหมด</h2>
-		<p><button v-on:click="logout">ล็อกเอาท์</button></p>
+		
 		<h4>จํานวนร้านแนะนำ {{ blogs.length }}</h4>
-		<p><button v-on:click="navigateTo('/blog/create')">สร้าง blog</button></p>
+		<p><button class="button1"  v-on:click="navigateTo('/blog/create')">เพิ่มร้านแนะนำ</button></p>
 		<div v-for="blog in blogs" v-bind:key="blog.id">
-			<p>id: {{ blog.id }}</p>
+			
 			<p>ชื่อร้าน: {{ blog.title }}</p>
-			<p>ข้อมูล: {{ blog.content }}</p>
-			<p>หมวดหมู่: {{ blog.category }}</p>
-			<p>สถานะ: {{ blog.status }}</p>
+			
+			<p>ที่อยู่: {{ blog.category }}</p>
+			<p>ประเภทร้าน: {{ blog.status }}</p>
 			<p>
-				<button v-on:click="navigateTo('/blog/' + blog.id)">ดู blog</button>
-				<button v-on:click="navigateTo('/blog/edit/' + blog.id)">
-					แก้ไขร้าน
+				<button class="button1" v-on:click="navigateTo('/blog/' + blog.id)">ดูข้อมูล</button>
+				<button class="button2" v-on:click="navigateTo('/blog/edit/' + blog.id)">
+					แก้ไข
 				</button>
-				<button v-on:click="deleteBlog(blog)">ลบข้อมูล</button>
+				<button class="button3" v-on:click="deleteBlog(blog)">ลบ</button>
 			</p>
 			<hr />
 		</div>
@@ -61,4 +61,36 @@ export default {
 };
 </script>
 <style scoped>
+</style>
+
+
+<style>
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e1ff34; /* Green */
+}
+.button3 {
+  background-color: white;
+  color: black;
+  border: 2px solid #ff0000; /* Green */
+}
+.button1:hover {
+  background-color: #caffd2; /* Green */
+  color: white;
+}
+.button2:hover {
+  background-color: #faffb7; /* Green */
+  color: white;
+}
+.button3:hover {
+  background-color: #ff6c6c; /* Green */
+  color: white;
+}
 </style>

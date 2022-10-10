@@ -1,10 +1,9 @@
 <template>
   <div>
     <h1>แสดงผู้ใช้</h1>
-    <p>id: {{ userId }}</p>
+    <p>id: {{ user.id }}</p>
     <p>ชื่อ - นามสกุล {{ user.name }} - {{ user.lastname }}</p>
     <p>email: {{ user.email }}</p>
-    <p>password: {{ user.password }}</p>
   </div>
 </template>
 <script>

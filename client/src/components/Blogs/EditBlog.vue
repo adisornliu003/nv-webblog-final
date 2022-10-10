@@ -40,8 +40,8 @@
                 :src="BASE_URL + picture.name"
                 alt="picture image"
               />
-              <button v-on:click.prevent="delFile(picture)">ลบ</button>
-              <button v-on:click.prevent="useThumbnail(picture.name)">
+              <button class="button3" v-on:click.prevent="delFile(picture)">ลบ</button>
+              <button class="button1" v-on:click.prevent="useThumbnail(picture.name)">
                 รูปย่อ
               </button>
             </li>
@@ -50,21 +50,13 @@
         </div>
       </form>
 
-      <p><strong>ข้อมูล:</strong></p>
-      <p>
-        <vue-ckeditor
-          v-model.lazy="blog.content"
-          :config="config"
-          @blur="onBlur($event)"
-          @focus="onFocus($event)"
-        />
-      </p>
+      
 
-      <p>หมวดหมู่: <input type="text" v-model="blog.category" /></p>
-      <p>สถานะ: <input type="text" v-model="blog.status" /></p>
+      <p>ที่อยู่: <input type="text" v-model="blog.category" /></p>
+      <p>ประเภทร้าน: <input type="text" v-model="blog.status" /></p>
       <p>
-        <button type="submit">update blog</button>
-        <button v-on:click="navigateTo('/blogs')">กลับ</button>
+        <button class="button1" type="submit">ยืนยัน</button>
+        <button class="button1" v-on:click="navigateTo('/blogs')">กลับ</button>
       </p>
     </form>
   </div>
@@ -382,3 +374,34 @@ ul.pictures li img {
   width: 200px;
 }
 </style>
+<style>
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e1ff34; /* Green */
+}
+.button3 {
+  background-color: white;
+  color: black;
+  border: 2px solid #ff0000; /* Green */
+}
+.button1:hover {
+  background-color: #caffd2; /* Green */
+  color: white;
+}
+.button2:hover {
+  background-color: #faffb7; /* Green */
+  color: white;
+}
+.button3:hover {
+  background-color: #ff6c6c; /* Green */
+  color: white;
+}
+</style>
+

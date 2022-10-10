@@ -6,14 +6,14 @@
         <p>นามกสุล: <input type="text" v-model="user.lastname"></p>
         <p>email: <input type="text" v-model="user.email"></p>
         <p>password: <input type="text" v-model="user.password"></p>
-        <p><button type="submit">แก้ไข้</button></p>
+        <p><button class="button2" type="submit">แก้ไข้</button></p>
     </form>
     <hr>
     <div>
         <p>ชื่อ: {{user.name}}</p>
         <p>นามกสุล: {{user.lastname}}</p>
         <p>email: {{user.email}}</p>
-        <p>password: {{user.password}}</p>
+        
     </div>
 </div>
 </template>
@@ -57,4 +57,33 @@ export default {
 <style scoped>
 
 
+</style>
+<style>
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e1ff34; /* Green */
+}
+.button3 {
+  background-color: white;
+  color: black;
+  border: 2px solid #ff0000; /* Green */
+}
+.button1:hover {
+  background-color: #caffd2; /* Green */
+  color: white;
+}
+.button2:hover {
+  background-color: #faffb7; /* Green */
+  color: white;
+}
+.button3:hover {
+  background-color: #ff6c6c; /* Green */
+  color: white;
+}
 </style>

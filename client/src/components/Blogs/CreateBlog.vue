@@ -47,19 +47,11 @@
           <div class="clearfix"></div>
         </div>
       </form>
-      <p><strong>ข้อมูล:</strong></p>
-      <p>
-        <vue-ckeditor
-          v-model.lazy="blog.content"
-          :config="config"
-          @blur="onBlur($event)"
-          @focus="onFocus($event)"
-        />
-      </p>
+      
 
-      <p>หมวดหมู่: <input type="text" v-model="blog.category" /></p>
-      <p>สถานะ: <input type="text" v-model="blog.status" /></p>
-      <p><button  type="submit">สร้าง blog</button></p>
+      <p>ที่อยู่: <input type="text" v-model="blog.category" /></p>
+      <p>ประเภทร้าน: <input type="text" v-model="blog.status" /></p>
+      <p><button  type="submit">เพิ่มร้านแนะนำ</button></p>
       
     </form>
   </div>

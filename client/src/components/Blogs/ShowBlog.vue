@@ -1,11 +1,10 @@
 <template>
 	<div>
 		<h1>ร้านที่แสดง</h1>
-		<p>id: {{ blog.id }}</p>
 		<p>ชิ่อร้าน: {{ blog.title }}</p>
-		<p>ข้อมูล: {{ blog.content }}</p>
-		<p>หมวดหมู่: {{ blog.category }}</p>
-		<p>สถานะ: {{ blog.status }}</p>
+		
+		<p>ที่อยู่: {{ blog.category }}</p>
+		<p>ประเภทร้าน: {{ blog.status }}</p>
 		<p>
 			<button v-on:click="navigateTo('/blog/edit/' + blog.id)">
 				แก้ไขร้านแนะนำ

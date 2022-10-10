@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>สร้างผู้ใช้</h1>
+    <center><h1>สร้างผู้ใช้</h1>
     <form v-on:submit.prevent = "createUser">
         <p>ชื่อ: <input type="text" v-model="user.name"></p>
         <p>นามสกุล: <input type="text" v-model="user.lastname"></p>
@@ -15,7 +15,7 @@
         <p>email: {{user.email}}</p>
         <p>password: {{user.password}}</p>
     </div>
-</div>
+</center></div>
 </template>
 <script>
 import UsersService from '@/services/UsersService'

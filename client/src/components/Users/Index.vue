@@ -4,7 +4,7 @@
     <div v-if="users.length">
       <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
       <p>
-        <button v-on:click="navigateTo('/user/create')">
+        <button class="button1" v-on:click="navigateTo('/user/create')">
             สร้างผู้ใช้งาน
           </button>
       </p>
@@ -12,21 +12,21 @@
         <p>id: {{ user.id }}</p>
         <p>ชื่อ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
         <p>Email: {{ user.email }}</p>
-        <p>Password: {{ user.password }}</p>
+        
         <p>
-          <button v-on:click="navigateTo('/user/' + user.id)">
+          <button class="button1" v-on:click="navigateTo('/user/' + user.id)">
             ดูข้อมูลผู้ใช้
           </button>
-          <button v-on:click="navigateTo('/user/edit/' + user.id)">
+          <button class="button2" v-on:click="navigateTo('/user/edit/' + user.id)">
             แก้ไขข้อมูล
           </button>
-          <button v-on:click="deleteUser(user)">
+          <button class="button3" v-on:click="deleteUser(user)">
             ลบข้อมูล
           </button>
         </p>
         <hr />
       </div>
-      <p><button v-on:click="logout">ล็อกเอาท์</button></p>
+      <p><button class="button3" v-on:click="logout">ล็อกเอาท์</button></p>
     </div>
   </div>
 </template>
@@ -76,4 +76,33 @@ export default {
 };
 </script>
 <style scoped>
+</style>
+<style>
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e1ff34; /* Green */
+}
+.button3 {
+  background-color: white;
+  color: black;
+  border: 2px solid #ff0000; /* Green */
+}
+.button1:hover {
+  background-color: #caffd2; /* Green */
+  color: white;
+}
+.button2:hover {
+  background-color: #faffb7; /* Green */
+  color: white;
+}
+.button3:hover {
+  background-color: #ff6c6c; /* Green */
+  color: white;
+}
 </style>
