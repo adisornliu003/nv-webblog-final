@@ -1,6 +1,6 @@
 <template>
   
-  <div>
+  <div style="border:20px solid #99CCFF">
    
     <form v-on:submit.prevent="createBlog">
       <p>ชื่อร้าน: <input type="text" v-model="blog.title" /></p>

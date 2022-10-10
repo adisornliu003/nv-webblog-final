@@ -1,16 +1,17 @@
 <template>
 	
-	<div>
+	<div >
 		
 		<div class="nv-navbar">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			
 			<ul class="nav">
 				
-				<li><router-link :to="{ name: 'blogs' }">แนะนำ</router-link></li>
+				<li><router-link :to="{ name: 'blogs' }">เพิ่มข้อมูล</router-link></li>
 				<li><router-link :to="{ name: 'users' }">ผู้ใช้</router-link></li>
-				
+				<li><router-link :to="{ name: 'recoms' }">ร้านค้าที่แนะนำ</router-link></li>
 				<li><router-link :to="{ name: 'login' }">ล็อกอิน</router-link></li>
+				
 			</ul>
 			<div class="clearfix" />
 		</div>

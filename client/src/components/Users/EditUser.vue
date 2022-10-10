@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="border:20px solid #99CCFF">
     <h1>แก้ไขผู้ใช้</h1>
     <form v-on:submit.prevent = "editUser">
         <p>ชื่อ: <input type="text" v-model="user.name"></p>

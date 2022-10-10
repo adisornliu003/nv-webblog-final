@@ -1,28 +1,28 @@
 <template>
 	<div style="border:20px solid #99CCFF">
 		<h1>ข้อมูลร้านค้า</h1>
-		<p>ชิ่อร้าน: {{ blog.title }}</p>
+		<p>ชิ่อร้าน: {{ recom.title }}</p>
 		
-		<p>ที่อยู่: {{ blog.category }}</p>
-		<p>ประเภทร้าน: {{ blog.status }}</p>
+		<p>ที่อยู่: {{ recom.category }}</p>
+		<p>ประเภทร้าน: {{ recom.status }}</p>
 		<p>
 			
-			<button class="button1" v-on:click="navigateTo('/blogs')">กลับ</button>
+			<button class="button1" v-on:click="navigateTo('/recom')">กลับ</button>
 		</p>
 	</div>
 </template>
 <script>
-import BlogsService from "@/services/BlogsService";
+import RecomService from "@/services/RecomService";
 export default {
 	data() {
 		return {
-			blog: null,
+			recom: null,
 		};
 	},
 	async created() {
 		try {
-			let blogId = this.$route.params.blogId;
-			this.blog = (await BlogsService.show(blogId)).data;
+			let recomId = this.$route.params.recomId;
+			this.recom = (await RecomService.show(recomId)).data;
 		} catch (error) {
 			console.log(error);
 		}

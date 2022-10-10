@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="border:20px solid #99CCFF">
     <h1>แสดงผู้ใช้</h1>
     <p>id: {{ user.id }}</p>
     <p>ชื่อ - นามสกุล {{ user.name }} - {{ user.lastname }}</p>

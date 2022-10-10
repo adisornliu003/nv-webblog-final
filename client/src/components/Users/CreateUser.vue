@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="border:20px solid #99CCFF">
     <center><h1>สร้างผู้ใช้</h1>
     <form v-on:submit.prevent = "createUser">
         <p>ชื่อ: <input type="text" v-model="user.name"></p>

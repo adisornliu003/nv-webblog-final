@@ -2,35 +2,35 @@
 	<div style="border:20px solid #99CCFF">
 		<h2> จัดการข้อมูลร้านทั้งหมด</h2>
 		
-		<h4>จํานวนร้าน {{ blogs.length }} ร้าน</h4>
-		<p><button class="button1"  v-on:click="navigateTo('/blog/create')">เพิ่มร้านแนะนำ</button></p><br>
-		<div v-for="blog in blogs" v-bind:key="blog.id">
+		<h4>จํานวนร้าน {{ recom.length }} ร้าน</h4>
+		<p align = "right"><button class="button1"  v-on:click="navigateTo('/recom/create')">เพิ่มร้านแนะนำ</button></p><br>
+		<div v-for="recom in recom" v-bind:key="recom.id">
 			
-		<p>ชื่อร้าน: {{ blog.title }}</p>
+		<p>ชื่อร้าน: {{ recom.title }}</p>
 			
-			<p>ที่อยู่: {{ blog.category }}</p>
-			<p>ประเภทร้าน: {{ blog.status }}</p>
+			<p>ที่อยู่: {{ recom.category }}</p>
+			<p>ประเภทร้าน: {{ recom.status }}</p>
 			<p>
-				<button class="button1" v-on:click="navigateTo('/blog/' + blog.id)">ดูข้อมูล</button>
-				<button class="button2" v-on:click="navigateTo('/blog/edit/' + blog.id)">
+				<button class="button1" v-on:click="navigateTo('/recom/' + recom.id)">ดูข้อมูล</button>
+				<button class="button2" v-on:click="navigateTo('/recom/edit/' + recom.id)">
 					แก้ไข
 				</button>
-				<button class="button3" v-on:click="deleteBlog(blog)">ลบ</button>
+				<button class="button3" v-on:click="deleteBlog(recom)">ลบ</button>
 			</p>
 			<hr />
 		</div>
 	</div>
 </template>
 <script>
-import BlogsService from "@/services/BlogsService";
+import RecomService from "@/services/RecomService";
 export default {
 	data() {
 		return {
-			blogs: [],
+			recom: [],
 		};
 	},
 	async created() {
-		this.blogs = (await BlogsService.index()).data;
+		this.recom = (await RecomService.index()).data;
 	},
 	methods: {
 		logout() {
@@ -43,11 +43,11 @@ export default {
 		navigateTo(route) {
 			this.$router.push(route);
 		},
-		async deleteBlog(blog) {
+		async deleteRecom(recom) {
 			let result = confirm("Want to delete?");
 			if (result) {
 				try {
-					await BlogsService.delete(blog);
+					await RecomService.delete(recom);
 					this.refreshData();
 				} catch (err) {
 					console.log(err);
@@ -55,7 +55,7 @@ export default {
 			}
 		},
 		async refreshData() {
-			this.blogs = (await BlogsService.index()).data;
+			this.recom = (await RecomService.index()).data;
 		},
 	},
 };

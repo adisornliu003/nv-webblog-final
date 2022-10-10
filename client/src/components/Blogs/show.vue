@@ -6,7 +6,9 @@
 		<p>ที่อยู่: {{ blog.category }}</p>
 		<p>ประเภทร้าน: {{ blog.status }}</p>
 		<p>
-			
+			<button class="button2" v-on:click="navigateTo('/blog/edit/' + blog.id)">
+				แก้ไขร้านแนะนำ
+			</button>
 			<button class="button1" v-on:click="navigateTo('/blogs')">กลับ</button>
 		</p>
 	</div>

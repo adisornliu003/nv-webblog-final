@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="border:20px solid #99CCFF">
     <h1> ผู้ใช้ทั้งหมด</h1>
     <div v-if="users.length">
       <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
@@ -13,17 +13,7 @@
         <p>ชื่อ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
         <p>Email: {{ user.email }}</p>
         
-        <p>
-          <button class="button1" v-on:click="navigateTo('/user/' + user.id)">
-            ดูข้อมูลผู้ใช้
-          </button>
-          <button class="button2" v-on:click="navigateTo('/user/edit/' + user.id)">
-            แก้ไขข้อมูล
-          </button>
-          <button class="button3" v-on:click="deleteUser(user)">
-            ลบข้อมูล
-          </button>
-        </p>
+        
         <hr />
       </div>
       <p><button class="button3" v-on:click="logout">ล็อกเอาท์</button></p>
