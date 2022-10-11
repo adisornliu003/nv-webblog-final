@@ -6,7 +6,7 @@
       <p>ชื่อร้าน: <input type="text" v-model="blog.title" /></p>
       <transition name="fade">
 		<div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
-			<img :src="BASE_URL + blog.thumbnail" alt="thumbnail" />
+			<img :src="BASE_URL + blog.thumbnail" alt="thumbnail" width="120" />
 		</div>
 	  </transition>
       <form enctype="multipart/form-data" novalidate>
@@ -40,8 +40,10 @@
                 :src="BASE_URL + picture.name"
                 alt="picture image"
               />
-              <button v-on:click.prevent="delFile(picture)">ลบ</button>
-			  
+              <button class="button3" v-on:click.prevent="delFile(picture)">ลบ</button>
+              <button class="button1" v-on:click.prevent="useThumbnail(picture.name)">ยืนยัน</button>
+                
+              
             </li>
           </ul>
           <div class="clearfix"></div>
@@ -51,7 +53,7 @@
 
       <p>ที่อยู่: <input type="text" v-model="blog.category" /></p>
       <p>ประเภทร้าน: <input type="text" v-model="blog.status" /></p>
-      <p><button  type="submit">เพิ่มร้านแนะนำ</button></p>
+      <p><button class="button1"  type="submit">เพิ่มร้านแนะนำ</button></p>
       
     </form>
   </div>

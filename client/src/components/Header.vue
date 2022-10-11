@@ -10,7 +10,7 @@
 				<li><router-link :to="{ name: 'blogs' }">เพิ่มข้อมูล</router-link></li>
 				<li><router-link :to="{ name: 'users' }">ผู้ใช้</router-link></li>
 				<li><router-link :to="{ name: 'login' }">ล็อกอิน</router-link></li>
-				<li><router-link :to="{ name: 'reco' }">ร้านแนะนำ</router-link></li>
+				
 				
 			</ul>
 			<div class="clearfix" />

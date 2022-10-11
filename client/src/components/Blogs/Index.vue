@@ -14,6 +14,18 @@
       </div></center>
         
 </td></tr></table></td></tr></table><br>
+<div class="blog-tab">
+									<transition name="fade">
+										<div
+											class="thumbnail-pic"
+											v-if="blog.thumbnail != 'null'"
+											align="center"
+										>
+											<img :src="BASE_URL + blog.thumbnail" alt="thumbnail" width="120" />
+										</div>
+									</transition>
+								</div>
+		
 		<p>ชื่อร้าน: {{ blog.title }}</p>
 			
 			<p>ที่อยู่: {{ blog.category }}</p>
@@ -35,6 +47,8 @@ export default {
 	data() {
 		return {
 			blogs: [],
+			BASE_URL: "http://localhost:8081/assets/uploads/",
+			
 		};
 	},
 	async created() {
@@ -67,6 +81,7 @@ export default {
 		},
 	},
 };
+
 </script>
 <style scoped>
 </style>

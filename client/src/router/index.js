@@ -19,9 +19,8 @@ import CommentIndex from '@/components/Comments/Index'
 import Upload from '@/components/Utils/Upload'
 
 import RecomIndex from '@/components/Recom/Index'
-import RecomCreate from '@/components/Recom/CreateRecom'
-import RecomEdit from '@/components/Recom/EditRecom'
-import RecomShow from '@/components/Recom/ShowRecom'
+
+
 
 
 Vue.use(Router)
@@ -88,21 +87,6 @@ export default new Router({
       name: 'recoms',
       component: RecomIndex
     },
-    {
-      path: '/recom/create',
-      name: 'recom-create',
-      component: RecomCreate
-    },
-    {
-      path: '/recom/edit/:recomId',
-      name: 'recom-edit',
-      component: RecomEdit
-    },
-    {
-      path: '/recom/:recomId',
-      name: 'recom',
-      component: RecomShow
-    },
-   
+
   ]
 })

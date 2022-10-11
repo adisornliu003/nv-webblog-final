@@ -2,11 +2,11 @@ const UserController = require('./controllers/UserController.js');
 const UserAuthenController = require('./controllers/UserAuthenController');
 const isAuthenController = require('./authen/isAuthenController')
 const BlogController = require('./controllers/BlogController');
-const ProductController = require('./controllers/ProductController');
+
 const RecomController = require('./controllers/RecomController');
 const Blog = require('./models/Blog.js');
 const Recom = require('./models/Recom.js');
-const Product = require('./models/Product.js');
+
 
 
 let multer = require("multer")
@@ -41,19 +41,12 @@ module.exports = (app) => {
     app.get('/blog/:blogId', BlogController.show)
     app.get('/blogs', BlogController.index)
 
-    app.post('/product', ProductController.create)
-    app.put('/product/:productId', ProductController.put)
-    app.delete('/product/:productId', ProductController.remove)
-    app.get('/product/:productId', ProductController.show)
-    app.get('/product', ProductController.index)
+    
 
-    app.post('/recom', RecomController.create)
-    app.put('/recom/:recomId', RecomController.put)
-    app.delete('/recom/:recomId', RecomController.remove)
-    app.get('/recom/:recomId', RecomController.show)
+    
     app.get('/recom', RecomController.index)
 
-    app.put('/reco/:recoId', RecoController.put)
+    
 
     app.post('/upload', function (req, res) {
         upload(req, res, function (err) {
